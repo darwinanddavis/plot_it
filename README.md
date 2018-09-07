@@ -30,7 +30,7 @@ eval(parse(text = script))
 
 ```{r}
 # Set global plotting parameters
-message("plot_it = 1/0, set colour, set colour palette 'display.brewer.all()',set alpha for col,set font")
+cat("plot_it( \n0 for presentation, 1 for manuscript, \nset colour for background, \nset colour palette. use 'display.brewer.all()', \nset alpha for colour transperancy, \nset font style \n)")
 plot_it(0,"blue","Spectral",1,"mono") # set col function params
 plot_it_gg("white") # same as above
 ```  

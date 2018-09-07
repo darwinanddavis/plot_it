@@ -21,7 +21,7 @@ Plotting function for switching between manuscript-ready and presentation style 
 ```{r}
 require(RCurl)
 
-script <- getURL("https://raw.githubusercontent.com/opetchey/RREEBES/Beninca_development/Beninca_etal_2008_Nature/report/functions/indirect_method_functions.R", ssl.verifypeer = FALSE)
+script <- getURL("https://github.com/darwinanddavis/plot_it/raw/master/plot_it.R", ssl.verifypeer = FALSE)
 
 eval(parse(text = script))
 ```  

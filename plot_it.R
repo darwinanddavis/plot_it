@@ -3,11 +3,11 @@ plot_it <- function(manuscript,bg,cp1,cp2,alpha,family){ # plotting function (pl
   graphics.off()
   if(manuscript==0){
     if(bg=="black"){
-      colvec<-magma(200,1) # plot window bg
+      colvec <<- magma(200,1) # plot window bg # USES <<- OPERATOR
       par(bg = colvec[1],col.axis="white",col.lab="white",col.main="white",fg="white",bty="n",las=1,mar=c(5,6,4,2),family=family) #mono
       border=adjustcolor("purple",alpha=0.5)
     }else{
-      colvec<-bpy.colors(200) # plot window bg
+      colvec <<- bpy.colors(200) # plot window bg # USES <<- OPERATOR
       par(bg = colvec[1],col.axis="white",col.lab="white",col.main="white",fg="white",bty="n",las=1,mar=c(5,6,4,2),family=family) 
       border=adjustcolor("blue",alpha=0.5)
     }

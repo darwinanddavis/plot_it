@@ -1,26 +1,30 @@
 ### set plotting params  
-plot_it <- function(manuscript,bg,cp,alpha,family){ # plotting function (plot for MS or not, set bg color, set color palette from RColorBrewer, set alpha value for transperancy) 
+plot_it <- function(manuscript,bg,cp1,cp2,alpha,family){ # plotting function (plot for MS or not, set bg color, set color palette from RColorBrewer, set alpha value for transperancy) 
   graphics.off()
   if(manuscript==0){
     if(bg=="black"){
-      colvec<-magma(200,1)
+      colvec<-magma(200,1) # plot window bg
       par(bg = colvec[1],col.axis="white",col.lab="white",col.main="white",fg="white",bty="n",las=1,mar=c(5,6,4,2),family=family) #mono
       border=adjustcolor("purple",alpha=0.5)
     }else{
-      colvec<-bpy.colors(200)
+      colvec<-bpy.colors(200) # plot window bg
       par(bg = colvec[1],col.axis="white",col.lab="white",col.main="white",fg="white",bty="n",las=1,mar=c(5,6,4,2),family=family) 
       border=adjustcolor("blue",alpha=0.5)
     }
   }else{
     #    graphics.off()
     par(bty="n",las=1,family=family) 
+    colv<-"white"
   }
   # color palettes
-  # ifelse(manuscript==1,colvec<-adjustcolor(brewer.pal(9,cp)[9], alpha = alpha),colvec <- adjustcolor(brewer.pal(9,cp)[5], alpha = alpha)) # fine tune plotting colors for plotting bg
-  # colfunc <<- colorRampPalette(brewer.pal(9,cp),alpha=alpha)
-  colvec <- brewer.pal(11,cp)[1:3]
-  colvec2 <- brewer.pal(11,cp)[9:11]
-  colvec <<- c(colvec,colvec2) # USES <<- OPERATOR
+  # ifelse(manuscript==1,colvec<-adjustcolor(brewer.pal(9,cp1)[9], alpha = alpha),colvec <- adjustcolor(brewer.pal(9,cp1)[5], alpha = alpha)) # fine tune plotting colors for plotting bg
+  # colfunc <<- colorRampPalette(brewer.pal(9,cp1),alpha=alpha)
+  cp1_info <- brewer.pal.info[cp1,]$maxcolors
+  cp2_info <- brewer.pal.info[cp2,]$maxcolors
+  col1 <- brewer.pal(cp1_info,cp1)[1:3]
+  col2 <- brewer.pal(cp1_info,cp1)[9:11]
+  colvec <<- c(col1,col2) # USES <<- OPERATOR
+  colvec2 <<- brewer.pal(cp2_info,cp2) # USES <<- OPERATOR
 }
 
 # Setting ggplot theme graphics

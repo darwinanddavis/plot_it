@@ -1,4 +1,4 @@
-### set plotting params  
+### set plotting params   
 plot_it <- function(manuscript,bg,cp1,cp2,alpha,family){ # plotting function (plot for MS or not, set bg color, set color palette from RColorBrewer, set alpha value for transperancy) 
   graphics.off()
   if(manuscript==0){

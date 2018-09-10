@@ -21,7 +21,7 @@ plot_it <- function(manuscript,bg,cp1,cp2,alpha,family){ # plotting function (pl
   # colfunc <<- colorRampPalette(brewer.pal(9,cp1),alpha=alpha)
   cp1_info <- brewer.pal.info[cp1,]$maxcolors
   cp2_info <- brewer.pal.info[cp2,]$maxcolors
-  colv <<- brewer.pal(cp1_info,cp1a) # USES <<- OPERATOR
+  colv <<- brewer.pal(cp1_info,cp1) # USES <<- OPERATOR
   colv2 <<- brewer.pal(cp2_info,cp2) # USES <<- OPERATOR
 }
 

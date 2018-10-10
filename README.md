@@ -31,6 +31,7 @@ require(RColorBrewer)
 display.brewer.all()
 # Set global plotting parameters
 cat("plot_it( \n0 for presentation, 1 for manuscript, \nset colour for background, \nset colour palette 1. use 'display.brewer.all()', \nset colour palette 2. use 'display.brewer.all()', \nset alpha for colour transperancy, \nset font style \n)")
+
 plot_it(0,"blue","Spectral","Greens",1,"mono") # set plot function params       
 plot_it_gg("white") # same as above for ggplot    
 ```  

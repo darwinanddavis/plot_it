@@ -23,8 +23,12 @@ plot_it <- function(manuscript,bg,cp1,cp2,alpha,family){ # plotting function (pl
   cp2_info <- brewer.pal.info[cp2,]$maxcolors
   colv <<- brewer.pal(cp1_info,cp1) # USES <<- OPERATOR
   colv2 <<- brewer.pal(cp2_info,cp2) # USES <<- OPERATOR
-  return(colv)
-  return(colv2)
+  # plot(1:max(cp1_info),pch=20,cex=3,col=colv,main="Colour pallete #1")
+  par(mfrow=c(1,2))
+  plot.new()
+  legend("center",colv,fill=colv,cex=0.5,bty="n")
+  plot.new()
+  legend("center",colv2,fill=colv2,cex=0.5,bty="n")
 }
 
 # Setting ggplot theme graphics

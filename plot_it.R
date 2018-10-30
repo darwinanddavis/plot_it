@@ -1,5 +1,4 @@
 ### set plotting params   
-require("RColorBrewer"); require("sp"); require("ggplot2"); require("ggthemes")
 plot_it <- function(manuscript,bg,cp1,cp2,alpha,family){ # plotting function (plot for MS or not, set bg color, set color palette from RColorBrewer, set alpha value for transperancy) 
   graphics.off()
   if(manuscript==0){
@@ -24,6 +23,8 @@ plot_it <- function(manuscript,bg,cp1,cp2,alpha,family){ # plotting function (pl
   cp2_info <- brewer.pal.info[cp2,]$maxcolors
   colv <<- brewer.pal(cp1_info,cp1) # USES <<- OPERATOR
   colv2 <<- brewer.pal(cp2_info,cp2) # USES <<- OPERATOR
+  return(colv)
+  return(colv2)
 }
 
 # Setting ggplot theme graphics

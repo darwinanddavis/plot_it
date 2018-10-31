@@ -1,5 +1,8 @@
 ### set plotting params   
-plot_it <- function(manuscript,bg,cp1,cp2,alpha,family){ # plotting function (plot for MS or not, set bg color, set color palette from RColorBrewer, set alpha value for transperancy) 
+plot_it <- function(manuscript,bg,cp1,cp2,alpha,family){ # plotting function (plot for MS or not, set bg color, set color palettes 1 and 2 from RColorBrewer, set alpha value for transperancy, set font style) 
+  require(sp)
+  require(ggplot2)
+  require(ggthemes)
   graphics.off()
   if(manuscript==0){
     if(bg=="black"){

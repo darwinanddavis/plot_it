@@ -32,6 +32,7 @@ plot_it <- function(manuscript,bg,cp1,cp2,alpha,family){ # plotting function (pl
   legend("center",colv,fill=colv,cex=0.5,bty="n")
   plot.new()
   legend("center",colv2,fill=colv2,cex=0.5,bty="n")
+  par(mfrow=c(1,1))
 }
 
 # Setting ggplot theme graphics

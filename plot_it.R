@@ -3,6 +3,7 @@ plot_it <- function(manuscript,bg,cp1,cp2,alpha,family){ # plotting function (pl
   require(sp)
   require(ggplot2)
   require(ggthemes)
+  require(RColorBrewer)
   graphics.off()
   if(manuscript==0){
     if(bg=="black"){

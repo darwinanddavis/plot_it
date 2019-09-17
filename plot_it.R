@@ -36,12 +36,33 @@ plot_it <- function(manuscript,bg,cp1,cp2,alpha,family){ # plotting function (pl
 }
 
 # Setting ggplot theme graphics
-plot_it_gg <- function(bg){ # bg = colour to plot bg, family = font family
+plot_it_gg <- function(bg,fg){ # bg = colour to plot bg, family = font family
   if(bg=="white"){
     bg <- "white"
-    fg <- "black"
-    theme_tufte(base_family = "HersheySans") +
-      theme(panel.border = element_blank(),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),panel.background = element_rect(fill = bg,colour = bg),plot.background = element_rect(fill=bg)) +
-      theme(axis.line = element_line(color = fg)) +theme(axis.ticks = element_line(color = fg)) + theme(plot.title = element_text(colour = fg)) +theme(axis.title.x = element_text(colour = fg), axis.title.y = element_text(colour = fg)) + theme(axis.text.x = element_text(color = fg),axis.text.y = element_text(color = fg)) + theme(legend.key = element_rect(fill = bg)) + theme(legend.title = element_text(colour=fg)) + theme(legend.text = element_text(colour=fg))
+    fg <- fg
   }
+  if(bg=="blue"){
+    colvec <- bpy.colors(200)
+    bg <- colvec[1]
+    fg <- fg
+  }else{
+    bg <- bg
+    fg <- fg
+  }
+    theme(panel.grid.major = element_blank(),panel.grid.minor = element_blank(),
+          panel.background = element_rect(fill = bg,colour = bg),
+          plot.background = element_rect(fill=bg)) +
+    theme(axis.line = element_line(color = fg)) +
+    theme(axis.ticks = element_line(color = fg)) + 
+    theme(plot.title = element_text(colour = fg)) +
+    theme(text = element_text(family="serif")) +
+    theme(axis.title.x = element_text(colour = fg), axis.title.y = element_text(colour = fg)) + 
+    theme(axis.text.x = element_text(color = fg),axis.text.y = element_text(color = fg)) + 
+    theme(legend.background=element_blank()) + # fills legend background for gg_themes
+    theme(legend.box.background = element_rect(color = "transparent", fill = "transparent")) + 
+    theme(legend.key = element_rect(color = "transparent", fill = "transparent")) + # for geom_lines legend
+    theme(legend.title = element_text(colour=fg)) + 
+    theme(legend.text = element_text(colour=fg)) +
+    theme(strip.background  = element_blank()) +
+    theme(strip.text = element_text(colour = fg)) # facet text colour for facet wrap
 }# end gg

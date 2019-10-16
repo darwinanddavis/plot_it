@@ -43,9 +43,10 @@ plot_it_gg("black", "white")  # specify background and foreground colours
 Maintainer
 ----------
 
-**Matt Malishev**  
-[Website](https://www.researchgate.net/profile/Matt_Malishev)
- 
-\[@darwinanddavis\](<https://twitter.com/darwinanddavis>)
- 
-matthew.malishev \[at\] gmail.com
+**Matt Malishev**
+
+-   :mag: [Website](https://www.researchgate.net/profile/Matt_Malishev)
+
+-   :bird: \[@darwinanddavis\](<https://twitter.com/darwinanddavis>)
+
+-   :email: matthew.malishev \[at\] gmail.com

@@ -81,15 +81,9 @@ knitr::opts_chunk$set(
 knitr::opts_knit$set(root.dir=paste0(params$dir,"/")) # set working dir
 ```
 
-# `plot_it` function  
+# `plot_it` function    
 
-Date: `r params$date`  
-
-`R` version: `r params$version`  
-
-*Corresponding author: `r params$email`  
-
-This document can be found at `r params$doi`  
+`R` version: `r params$version`    
 
 \newpage      
 
@@ -124,10 +118,10 @@ plot_it(0,"blue","Spectral","Greens",1,"mono") # set plot function params
 plot_it_gg("black","white") # specify background and foreground colours   
 ```  
 
-:three: Make cool graphs.  
+:three: Make cool graphs.    
 
-## Maintainer  
-**Matt Malishev**   
-:mag: [Website](https://www.researchgate.net/profile/Matt_Malishev)    
-:bird: [@darwinanddavis](https://twitter.com/darwinanddavis)  
-:email: matthew.malishev [at] gmail.com   
+## Maintainer    
+**Matt Malishev**     
+:mag: [Website](https://www.researchgate.net/profile/Matt_Malishev)      
+:bird: [@darwinanddavis](https://twitter.com/darwinanddavis)    
+:email: matthew.malishev [at] gmail.com     

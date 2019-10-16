@@ -2,13 +2,7 @@
 `plot_it` function
 ==================
 
-Date: 2019-10-16
-
 `R` version: 3.5.0
-
-\*Corresponding author: <matthew.malishev@gmail.com>
-
-This document can be found at <https://github.com/darwinanddavis/plot_it>
 
 Overview
 --------

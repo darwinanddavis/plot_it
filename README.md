@@ -44,8 +44,8 @@ Maintainer
 ----------
 
 **Matt Malishev**  
-:mag: [Website](https://www.researchgate.net/profile/Matt_Malishev)
+[Website](https://www.researchgate.net/profile/Matt_Malishev)
  
-:bird: \[@darwinanddavis\](<https://twitter.com/darwinanddavis>)
+\[@darwinanddavis\](<https://twitter.com/darwinanddavis>)
  
-:email: matthew.malishev \[at\] gmail.com
+matthew.malishev \[at\] gmail.com

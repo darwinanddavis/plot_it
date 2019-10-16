@@ -1,0 +1,114 @@
+---
+title: plot_it function
+author: |  
+ | Matthew Malishev^1^*
+ |  
+ | _^1^ Department of Biology, Emory University, 1510 Clifton Road NE, Atlanta, GA, USA, 30322_
+#bibliography:/Users/malishev/Documents/Melbourne Uni/Thesis_2016/library.bib
+fontsize: 10
+geometry: margin=1in
+documentclass: article
+linkcolor: pink
+urlcolor: blue
+citecolor: red
+always_allow_html: yes
+output:
+  md_document: 
+    variant: markdown_github
+  pdf_document:
+    includes:
+      in_header: # add .tex file with header content
+    highlight: tango
+    template: null
+    toc: yes
+    toc_depth: 4
+    number_sections: false
+    fig_width: 4
+    fig_height: 5
+    fig_caption: true
+    df_print: tibble 
+    citation_package: biblatex # natbib
+    latex_engine: xelatex #pdflatex # lualatex
+    keep_tex: true # keep .tex file in dir 
+  html_document:
+    highlight: tango
+    code_folding: hide
+    toc: yes
+    toc_depth: 4
+    number_sections: no
+    toc_float: yes
+  word_document:
+    highlight: tango
+    keep_md: yes
+    pandoc_args: --smart
+    #reference: mystyles.docx
+    toc: yes
+    toc_depth: 4
+inludes:
+  before_body: before_body.tex
+subtitle: 
+tags:
+- nothing
+- nothingness
+params: 
+  dir: "/Users/malishev/Documents/Melbourne Uni/Programs/R code/plot_it"
+  date: !r Sys.Date()
+  version: !r getRversion()
+  email: "matthew.malishev@gmail.com"
+  doi: https://github.com/darwinanddavis/plot_it
+classoption: portrait
+vignette: >
+  %\VignetteIndexEntry{plot_it}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+<!-- This file is edited in README.Rmd -->
+
+Date: `r params$date`  
+
+`R` version: `r params$version`  
+
+*Corresponding author: `r params$email`  
+
+This document can be found at `r params$doi`  
+
+\newpage      
+
+## Overview
+Plotting function for switching between manuscript-ready and presentation style plots in `R`.    
+
+### Directions
+:one: In your `R` file, run the following code.  
+
+```{r}
+require(RCurl)
+script <- getURL("https://raw.githubusercontent.com/darwinanddavis/plot_it/master/plot_it.R", ssl.verifypeer = FALSE)
+eval(parse(text = script))
+```  
+
+:two: Use the following function to set your plotting parameters.  
+
+- Specify if plotting for a manuscript or seminar (0/1)  
+- Specify background colour (char)  
+- Specify plotting colour palette 1 from RColorBrewer (char)  
+- Specify plotting colour palette 2 from RColorBrewer (char)  
+- Specify alpha transparency for plot points (int)  
+- Specify font family for plot text (char)  
+
+```{r}
+require(RColorBrewer)
+display.brewer.all()
+# Set global plotting parameters
+cat("plot_it( \n0 for presentation, 1 for manuscript, \nset colour for background, \nset colour palette 1. use 'display.brewer.all()', \nset colour palette 2. use 'display.brewer.all()', \nset alpha for colour transperancy, \nset font style \n)")
+
+plot_it(0,"blue","Spectral","Greens",1,"mono") # set plot function params       
+plot_it_gg("black","white") # specify background and foreground colours   
+```  
+
+:three: Make cool graphs.  
+
+## Maintainer  
+**Matt Malishev**   
+:mag: [Website](https://www.researchgate.net/profile/Matt_Malishev)    
+:bird: [@darwinanddavis](https://twitter.com/darwinanddavis)  
+:email: matthew.malishev [at] gmail.com   

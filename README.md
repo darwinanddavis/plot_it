@@ -44,9 +44,5 @@ plot_it_gg("black", "white")  # specify background and foreground colours
 
 **Matt Malishev**   
 :mag: [Website](https://darwinanddavis.github.io/DataPortfolio/)      
-:bird: <p>
-<a>
-    <img src="https://img.shields.io/twitter/follow/darwinanddavis.svg?label=Follow%20@darwinanddavis" alt="Follow @darwinanddavis"/>
-</a>
-</p> 
+:bird: <p><a><img src="https://img.shields.io/twitter/follow/darwinanddavis.svg?label=Follow%20@darwinanddavis" alt="Follow @darwinanddavis"/></a></p> 
 :email: matthew.malishev [at] gmail.com    

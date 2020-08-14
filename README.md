@@ -43,8 +43,7 @@ plot_it_gg("black", "white")  # specify background and foreground colours
 ## Maintainer      
 **Matt Malishev**       
 :mag: [Website](https://www.researchgate.net/profile/Matt_Malishev)      
-:bird: [@darwinanddavis](https://twitter.com/darwinanddavis)    
-<p><a><img src="https://img.shields.io/twitter/follow/darwinanddavis.svg?label=Follow%20@darwinanddavis" alt="Follow @darwinanddavis"/></a></p>   
-:email: matthew.malishev [at] gmail.com        
+:bird: [@darwinanddavis](https://twitter.com/darwinanddavis) <a><img src="https://img.shields.io/twitter/follow/darwinanddavis.svg?label=Follow%20@darwinanddavis" alt="Follow @darwinanddavis"/></a>    
+:email: matthew.malishev [at] gmail.com          
 
  
